@@ -1,10 +1,9 @@
-
-<!-- saved from url=(0073)https://twitch.guru/soclip/soclip.php?channel=functioneel&RID=off&dt=none -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>#profilePic { display:none; };</style><style>#slugInfoTwo { display:none; };</style>
-
-  
+<style>#profilePic { display:none; };</style><style>#slugInfoTwo { display:none; };</style>
+<html>
+  <head>
     <script src="https://cdn.jsdelivr.net/npm/comfy.js/dist/comfy.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+  </head>
   <style>
     body {
       margin:0px;
@@ -102,18 +101,17 @@
   bottom:10px;
   z-index:999999999;
 }
-  </style></head>
-  
+  </style>
   <body>
-    <div id="brand" style="visibility: hidden;"><img src="/soclip_files/gurulink.png"></div>
+    <div id="brand"><img src="https://www.twitch.guru/images/gurulink.png"></div>
     <div id="profilePic"></div>
-    <div id="slugInfo" style="visibility: hidden;"></div>
-    <div id="check" style="visibility: hidden;">Check Out <span id="streamer">brodie</span> </div>
-    <div id="player" style="visibility: hidden;">
-      <video id="video" width="100%" height="100%" autoplay="" src="" style="visibility: hidden;">
+    <div id="slugInfo"></div>
+    <div id="check">Check Out <span id="streamer">streamer</span> </div>
+    <div id="player">
+      <video id="video" width="100%" height="100%" autoplay >
         <source src="" type="video/mp4">
         Your browser does not support the video tag.
-      </video></div><div id="slugInfoTwo" style="visibility: hidden;"><h6>ded</h6></div>
+      </video></div><div id="slugInfoTwo"></div>
     
     <script type="text/javascript">
     
@@ -236,7 +234,7 @@
             message = message.split(".tv/");
             message = message[1];
           }
-          oReq.open("GET", "soclip_files/clipgrab.php?slug=" + message);
+          oReq.open("GET", "../clipgrab.php?slug=" + message);
           oReq.send();
         }
         }
@@ -272,7 +270,7 @@
         
         
           console.log(message);
-          oReq.open("GET", "soclip_files/clipgrab.php?slug=" + message);
+          oReq.open("GET", "../clipgrab.php?slug=" + message);
           oReq.send();
         }
         
@@ -280,7 +278,7 @@
         ComfyJS.Init("functioneel");
         
         function getClipDetails(message) {
-          fetch('soclip_files/clipsapi.php?channel=' + message)
+          fetch('../clipsapi.php?channel=' + message)
             .then(response => response.json())
             .then(data => newAPI(data));
         
@@ -290,7 +288,7 @@
         
             if (mp4Res != 0) {
               if (mp4Res.mp4.length > 5) {
-                fetch('soclip_files/userinfoapi.php?channel=' + message)
+                fetch('../userinfoapi.php?channel=' + message)
                   .then(response => response.json())
                   .then(data => newUser(data));
               }
@@ -401,5 +399,5 @@
         }
 
         </script>
-  
-</body></html>
+  </body>
+</html>
