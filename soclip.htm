@@ -105,7 +105,7 @@
   </style></head>
   
   <body>
-    <div id="brand" style="visibility: hidden;"><img src="./soclip_files/gurulink.png"></div>
+    <div id="brand" style="visibility: hidden;"><img src="/soclip_files/gurulink.png"></div>
     <div id="profilePic"></div>
     <div id="slugInfo" style="visibility: hidden;"></div>
     <div id="check" style="visibility: hidden;">Check Out <span id="streamer">brodie</span> </div>
@@ -236,7 +236,7 @@
             message = message.split(".tv/");
             message = message[1];
           }
-          oReq.open("GET", "../clipgrab.php?slug=" + message);
+          oReq.open("GET", "soclip_files/clipgrab.php?slug=" + message);
           oReq.send();
         }
         }
