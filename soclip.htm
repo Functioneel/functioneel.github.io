@@ -272,7 +272,7 @@
         
         
           console.log(message);
-          oReq.open("GET", "../clipgrab.php?slug=" + message);
+          oReq.open("GET", "soclip_files/clipgrab.php?slug=" + message);
           oReq.send();
         }
         
@@ -280,7 +280,7 @@
         ComfyJS.Init("functioneel");
         
         function getClipDetails(message) {
-          fetch('../clipsapi.php?channel=' + message)
+          fetch('soclip_files/clipsapi.php?channel=' + message)
             .then(response => response.json())
             .then(data => newAPI(data));
         
@@ -290,7 +290,7 @@
         
             if (mp4Res != 0) {
               if (mp4Res.mp4.length > 5) {
-                fetch('../userinfoapi.php?channel=' + message)
+                fetch('soclip_files/userinfoapi.php?channel=' + message)
                   .then(response => response.json())
                   .then(data => newUser(data));
               }
