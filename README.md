@@ -1,2 +1,2 @@
 # functioneel.github.io
-[page](test.html)
+[page](page.md)
