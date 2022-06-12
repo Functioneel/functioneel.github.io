@@ -1,6 +1,6 @@
 # functioneel.github.io
 
-[Snippets](Snippets.md)
+[Snippets](Snippets.html)
 
 [Clean.mp3](Clean.mp3)
 
